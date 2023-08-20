@@ -1,3 +1,4 @@
 add_subdirectory(assert)
 add_subdirectory(assert-equal)
 add_subdirectory(run-test)
+add_subdirectory(run-tests-all)

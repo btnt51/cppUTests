@@ -19,6 +19,10 @@
 
 #define ASSERT_HINT_FULL_INFO(expr, hint) cppUTests::AssertImpl(!!(expr), #expr, true, __FILE__, __FUNCTION__, __LINE__, (hint))
 
-#define RUN_TEST(func) cppUTests::RunTestImpl(func,(#func))  
+#define RUN_TEST(func) cppUTests::RunTestImpl(func,(#func)) 
+
+#define TEST(func) cppUTests::TestService::addTest(func, (#func))
+
+#define RUNTESTS() cppUTests::TestService::RunTests()
 
 #endif

@@ -1,6 +1,7 @@
 #ifndef IMPLEMENTATIONS_HPP
 #define IMPLEMENTATIONS_HPP
 
+#include <functional>
 #include <iostream>
 #include <string>
 
@@ -34,11 +35,21 @@ void AssertImpl(bool value, const std::string& expr_str, const bool fullInfo,
 
 template <typename FUNC>
 void RunTestImpl(FUNC function, const std::string & funcion_str) {
-    /* Напишите недостающий код */
     function();
     std::cerr << funcion_str << " OK" << std::endl;
 }
 
-}
+class TestService {
+public:
+    static void addTest(std::function<void()> func, const std::string& func_str);
 
+    static void RunTests();
+private:
+    static std::vector<std::pair<std::function<void()>, std::string> > arrayOfFuncs;
+};
+
+
+
+
+}
 #endif
