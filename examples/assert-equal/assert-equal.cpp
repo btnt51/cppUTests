@@ -6,7 +6,7 @@ using std::string_literals::operator""s;
 
 int main() {
     std::string hello = "hello"s;
-    ASSERT_EQUAL(hello.size(), 6u);
+    ASSERT_EQUAL_FULL_INFO(hello.size(), 6u);
 
     return 0;
 }

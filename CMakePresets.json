@@ -12,7 +12,8 @@
         "binaryDir": "${sourceDir}/build",
         "hidden": true,
         "cacheVariables": {
-          "CPPUTESTS_BUILD_EXAMPLES": "ON"
+          "CPPUTESTS_BUILD_EXAMPLES": "ON",
+          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
         }
       },
       {

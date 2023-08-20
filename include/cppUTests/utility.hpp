@@ -57,7 +57,14 @@ std::ostream& operator<<(std::ostream &out, const std::set<Element> container) {
     out << "}"s;
     return out;
 }
-}
 
+
+
+inline std::string NormalizeString(const std::string &file) {
+    std::string res = file;
+    res = res.substr(res.find_last_of("/")+1,res.size());
+    return res;
+}
+}
 
 #endif
